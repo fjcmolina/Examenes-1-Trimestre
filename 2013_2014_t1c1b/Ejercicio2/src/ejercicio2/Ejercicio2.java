@@ -24,16 +24,52 @@ import java.util.Scanner;
 public class Ejercicio2 {
 
   public static void main(String[] args) {
-    
+
     Scanner s = new Scanner(System.in);
-    
+
     System.out.print("Por favor, introduzca un número entero positivo: ");
     long numero1 = s.nextInt();
-    
+
     System.out.print("Ahora introduzca otro número de la misma longitud que el anterior: ");
     long numero2 = s.nextInt();
+
+    int longitud = 0;
+    long numero = numero1;
+    long numeroReves = 0;
+
+    if (numero == 0) {
+      longitud = 1;
+    }
+
+    while (numero > 0) {
+      numeroReves = (numeroReves * 10) + (numero % 10);
+      numero /= 10;
+      longitud++;
+    }
+
+    numero = numero2;
+    long numeroReves2 = 0;
+
+    while (numero > 0) {
+      numeroReves2 = (numeroReves2 * 10) + (numero % 10);
+      numero /= 10;
+    }
+
+    int digito;
+    long resultado = 0;
+
+    for (int i = 0; i < longitud; i++) {
+      
+      digito = (int)(numeroReves % 10);
+      resultado = (resultado * 10) + digito;
+      numeroReves /= 10;
+
+      digito = (int) (numeroReves2 % 10);
+      resultado = (resultado * 10) + digito;
+      numeroReves2 /= 10;
+    }
     
-    System.out.println("  ");
+    System.out.println("La mezcla de los dos numeros es: " + resultado);
   }
-  
+
 }
