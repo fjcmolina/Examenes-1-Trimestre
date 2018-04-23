@@ -33,7 +33,7 @@ public class Ejercicio2 {
     System.out.print("Ahora introduzca otro número de la misma longitud que el anterior: ");
     long numero2 = s.nextInt();
     
-    System.out.println("");
+    System.out.println("  ");
   }
   
 }
