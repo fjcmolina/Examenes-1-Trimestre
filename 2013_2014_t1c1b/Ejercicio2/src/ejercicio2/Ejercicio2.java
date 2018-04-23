@@ -54,7 +54,7 @@ public class Ejercicio2 {
       numeroReves2 = (numeroReves2 * 10) + (numero % 10);
       numero /= 10;
     }
-
+    
     int digito;
     long resultado = 0;
 
