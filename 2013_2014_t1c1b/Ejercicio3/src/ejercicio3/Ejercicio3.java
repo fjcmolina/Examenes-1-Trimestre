@@ -24,9 +24,9 @@ public class Ejercicio3 {
 
     Scanner s = new Scanner(System.in);
     System.out.print("Introduce la altura del reloj de arena: ");
-    
     int altura = s.nextInt();
 
+    
      //Parte de arriba del reloj
     for (int i = 1; i <= (altura / 2); i++){
       for (int j = 1; j <= (i - 1); j++){
@@ -38,7 +38,7 @@ public class Ejercicio3 {
       System.out.println();
     }
 
-    /* Centro del reloj */
+    // Parte central del reloj
     for (int i = 1; i <= (altura / 2); i++){
       System.out.print(" ");
     }    
