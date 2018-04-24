@@ -22,11 +22,11 @@ public class Ejercicio3 {
       int numero = (int) (Math.random() * 301) - 100;
       System.out.print(numero + " ");
 
-      if (numero % 2 == 0) {    // numero par
+      if (numero % 2 == 0) {    // Comprobar si el numero es par
         if (numero > maximoPar) {
           numero = maximoPar;
         }
-      } else {    // numero impar
+      } else {    // Y si no es impar
         if (numero < minimoImpar) {
           numero = minimoImpar;
         }
