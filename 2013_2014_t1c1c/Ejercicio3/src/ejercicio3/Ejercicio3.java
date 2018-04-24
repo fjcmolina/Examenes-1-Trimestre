@@ -32,7 +32,7 @@ public class Ejercicio3 {
     System.out.println("Numero de unidades: ");
     int unidades = s.nextInt();
 
-    System.out.println("Codigo de descuento: ");
+    System.out.println("Codigo de descuento(685,778,219): ");
     int codigo = s.nextInt();
 
     int precioTotal = 0;
@@ -41,12 +41,12 @@ public class Ejercicio3 {
     if (codigo == 685) {
       precioTotal = (precio * unidades) - 15;
     }
-    
+
     if (codigo == 778) {
-      if(unidades <= 20){
-      descuento = ((precio * unidades) * 5)/100;
-        }else {
-      precioTotal = descuento + (precio * (unidades - 20));
+      if (unidades <= 20) {
+        descuento = ((precio * unidades) * 5) / 100;
+      } else {
+        precioTotal = descuento + (precio * (unidades - 20));
       }
     }
 
@@ -57,6 +57,15 @@ public class Ejercicio3 {
         precioTotal = precio * unidades;
       }
     }
+
+    int iva = (precioTotal * 21) / 100;
+    int precioFinal = iva + precioTotal;
+
+    System.out.println("FACTURA");
+    System.out.println("Precio articulo: " + precio);
+    System.out.println("Numero de articulos pedidos: " + unidades);
+    System.out.println("Precio sin IVA: " + precioTotal);
+    System.out.println("Precio final: " + precioFinal);
   }
 
 }
