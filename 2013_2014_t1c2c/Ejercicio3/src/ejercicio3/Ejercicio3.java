@@ -31,7 +31,7 @@ public class Ejercicio3 {
       }
     }
     System.out.println("");
-    System.out.println("Media: " + (suma/45) );
+    System.out.println("Media: " + (suma/60) );
     System.out.println("Minimo par: " + minimo);
     System.out.println("Maximo multiplo de 3: " + multiploMaximo);
   }
