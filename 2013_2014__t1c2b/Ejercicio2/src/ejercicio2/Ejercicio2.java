@@ -12,11 +12,24 @@ package ejercicio2;
 public class Ejercicio2 {
 
   public static void main(String[] args) {
-
+    
+    int maximo = 0;
+    int minimo = 1000;
+    
     for (int i = 0; i < 45; i++) {
-      int numero = (int) (Math.random()* 1000) + 100;
+      int numero = (int) (Math.random()* 900) + 100;
       System.out.print(numero + " ");
+      
+      if(numero > maximo){
+        maximo = numero;
+      }
+      if(numero < minimo){
+        minimo = numero;
+      }
     }
+    System.out.println("");
+    System.out.println("Maximo: " + maximo);
+    System.out.println("Minimo: " + minimo);
   }
 
 }
