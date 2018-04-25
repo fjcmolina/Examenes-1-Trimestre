@@ -13,7 +13,7 @@ public class Ejercicio2 {
 
   public static void main(String[] args) {
 
-    int maximo = 0;
+    int suma = 0;
     int minimo = 1000;
     int multiploMaximo = 0;
 
@@ -21,10 +21,9 @@ public class Ejercicio2 {
       int numero = (int) (Math.random() * 900) + 100;
       System.out.print(numero + " ");
 
-      if (numero > maximo) {
-        maximo = numero;
-      }
-      if (numero < minimo) {
+      suma += numero;
+      
+      if ((numero < minimo) && ((numero % 2) == 1)) {
         minimo = numero;
       }
       if ((numero % 7 == 0) && (numero > multiploMaximo)) {
@@ -32,8 +31,8 @@ public class Ejercicio2 {
       }
     }
     System.out.println("");
-    System.out.println("Maximo: " + maximo);
-    System.out.println("Minimo: " + minimo);
+    System.out.println("Media: " + (suma/45));
+    System.out.println("Minimo impar: " + minimo);
     System.out.println("Maximo multiplo de 7: " + multiploMaximo);
   }
 
