@@ -41,14 +41,14 @@ public class Ejercicio2 {
       longitud++;
     } while (numero > 0);
 
-    // parte izquierda 
+    // Parte izquierda 
     long parteIzquierda = numeroIntroducido / (long) (Math.pow(10, longitud - posicion + 1));
     parteIzquierda = parteIzquierda * 10 + digito;
 
-    // parte derecha
+    // Parte derecha
     long parteDerecha = numeroIntroducido % (long) (Math.pow(10, longitud - posicion));
 
-    // resultado
+    // Resultado
     numero = parteIzquierda * (long) (Math.pow(10, longitud - posicion)) + parteDerecha;
     System.out.print("El número es " + numero);
   }
