@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *   Escribe un programa que muestre 60 números enteros aleatorios comprendidos entre 300 y 600
+ *   ambos incluidos y separados por espacios. Muestra también el máximo de los múltiplos de 3, el
+ *   mínimo de los pares y la media de todos los números
  */
 package ejercicio3;
 
@@ -11,11 +11,29 @@ package ejercicio3;
  */
 public class Ejercicio3 {
 
-  /**
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
+    
+    int minimo = 600;
+    int multiploMaximo = 0;
+    int suma = 0;
+
+    for (int i = 0; i < 60; i++) {
+      int numero = (int) (Math.random() * 300) + 300;
+      System.out.print(numero + " ");
+      
+      suma += numero;
+
+      if ((numero < minimo) && (numero % 2 == 0)) {
+        minimo = numero;
+      }
+      if ((numero % 3 == 0) && (numero > multiploMaximo)) {
+        multiploMaximo = numero;
+      }
+    }
+    System.out.println("");
+    System.out.println("Media: " + (suma/45) );
+    System.out.println("Minimo par: " + minimo);
+    System.out.println("Maximo multiplo de 3: " + multiploMaximo);
   }
   
 }
