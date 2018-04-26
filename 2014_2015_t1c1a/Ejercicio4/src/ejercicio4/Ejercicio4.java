@@ -28,12 +28,18 @@ public class Ejercicio4 {
     System.out.print("Por favor, introduzca la altura de la Z: ");
     int altura = s.nextInt();
 
+    while (altura < 4) {
+      System.out.println("La altura de la Z debe ser mayor o igual de 4");
+      System.out.print("Por favor, Introduzca la altura de la Z: ");
+      altura = s.nextInt();
+    }
+
     for (int i = 0; i < altura; i++) {
       System.out.print("*");
     }
 
     System.out.println();
-    
+
     // Parte central de la Z
     for (int i = (altura - 2); i >= 1; i--) {
       for (int j = 1; j <= i; j++) {

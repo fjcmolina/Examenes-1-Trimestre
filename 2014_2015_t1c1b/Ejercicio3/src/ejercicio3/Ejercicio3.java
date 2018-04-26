@@ -8,6 +8,8 @@
  */
 package ejercicio3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Francis
@@ -15,7 +17,11 @@ package ejercicio3;
 public class Ejercicio3 {
 
   public static void main(String[] args) {
-    
+
+    Scanner s = new Scanner(System.in);
+
+    System.out.println("Introduzaca la altura de la N: ");
+    int altura = s.nextInt();
   }
-  
+
 }
