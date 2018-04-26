@@ -29,6 +29,23 @@ public class Ejercicio2 {
     
     System.out.println("Por favor, introduzca un número entero positivo:");
     long numero =  s.nextLong();
+    
+    long digito = 0;
+    
+    do {
+      digito = numero % 10;
+      numero = numero / 10;
+    } while (((numero % 10) <= digito) && (numero > 0));
+
+
+    if (numero == 0) {
+
+      System.out.print("Están ordenados de menor a mayor");
+
+    } else {
+
+      System.out.print("No están ordenados  de menor a mayor");
+    }
   }
   
 }
