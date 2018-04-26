@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *     Realiza un programa que pinte la letra N hecha de asteriscos. El programa debe pedir la altura de la
+ *     letra, que deberá ser un número mayor o igual que 4. En caso de que el usuario introduzca un número
+ *     no válido, se mostrará un mensaje de error.
+ *
+ *     Ejemplo:
+ *     Por favor, introduzca la altura de la N: 5
  */
 package ejercicio3;
 
@@ -11,11 +14,8 @@ package ejercicio3;
  */
 public class Ejercicio3 {
 
-  /**
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
+    
   }
   
 }
