@@ -58,13 +58,17 @@ public class Ejercicio1 {
     String nombreTienda = "MODAS LA GUAPILLA";
     String cifTienda = "1234567A";
     
+    double precioDescuento = (precio - descuento);
+    double iva = (precioDescuento * 21)/100;
+    double total = precioDescuento + iva;
+    
     System.out.println("\n" + nombreTienda + " - " + cifTienda);
     System.out.println("TIQUE DE COMPRA");
-    System.out.println("Precio Articulo: " + precio);
-    System.out.println("Descuento: " + descuento + "(" + codigo + ")");
-    System.out.println("Precio con descuento: " + (precio - descuento));
-    System.out.println("IVA: ");
-    System.out.println("TOTAL: ");
+    System.out.println("Precio Articulo:      " + precio);
+    System.out.println("Descuento:            " + descuento + "(" + codigo + ")");
+    System.out.println("Precio con descuento: " + precioDescuento);
+    System.out.println("IVA:                  " + iva + "(21%)");
+    System.out.println("TOTAL:                " + total);
   }
 
 }
