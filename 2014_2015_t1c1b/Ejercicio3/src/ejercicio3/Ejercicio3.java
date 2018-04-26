@@ -22,6 +22,37 @@ public class Ejercicio3 {
 
     System.out.println("Introduzaca la altura de la N: ");
     int altura = s.nextInt();
-  }
 
+    while (altura < 4) {
+      System.out.println("La altura de la Z debe ser mayor o igual de 4");
+      System.out.print("Por favor, Introduzca la altura de la Z: ");
+      altura = s.nextInt();
+    }
+
+    //Primera linea
+    System.out.print("*");
+    for (int j = 1; j <= (altura - 2); j++) {
+      System.out.print(" ");
+    }
+    System.out.println("*");
+
+    //Parte del centro de la N
+    for (int i = (altura - 2); i <= altura; i++) {
+      System.out.print("*");
+      
+      
+      
+      for (int j = 1; j <= (altura - 2); j++) {
+        System.out.print(" ");
+      }
+      System.out.println("*");
+    }
+
+    //Ultima linea
+    System.out.print("*");
+    for (int j = 1; j <= (altura - 2); j++) {
+      System.out.print(" ");
+    }
+    System.out.println("*");
+  }
 }
