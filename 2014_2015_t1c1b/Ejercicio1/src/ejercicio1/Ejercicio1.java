@@ -45,8 +45,14 @@ public class Ejercicio1 {
 
       default:
     }
-    
-    System.out.println("Sueldo del trabajador: " + sueldoBase);
+
+    int horasExtra = ((horas - 140) * 2) / 100;
+
+    if (horas > 140) {
+      System.out.println("Sueldo del trabajador: " + (sueldoBase + (sueldoBase * horasExtra)));
+    } else {
+      System.out.println("Sueldo del trabajador: " + ((sueldoBase * horas)/140));
+    }
   }
 
 }
