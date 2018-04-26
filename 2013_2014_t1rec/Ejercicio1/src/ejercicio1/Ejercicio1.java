@@ -21,6 +21,8 @@
  */
 package ejercicio1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Francis
@@ -28,7 +30,41 @@ package ejercicio1;
 public class Ejercicio1 {
 
   public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
+
+    System.out.println("Por favor, introduzca el precio inicial del artículo en euros: ");
+    double precio = s.nextDouble();
+
+    System.out.println("Introduzca el código de descuento (introduzca 0 si no hay descuento): ");
+    String codigo = s.next();
+
+    double descuento = 0;
     
+    if (codigo.equals("0")) {
+      descuento = 0;
+    }
+    if (codigo.equals("FCJ4")) {
+      descuento = 3;
+    }
+    if (codigo.equals("Q25Y")) {
+      descuento = 5;
+    }
+    if (codigo.equals("AM68")) {
+      descuento = 10;
+    }
+     
+    
+    String nombreTienda = "MODAS LA GUAPILLA";
+    String cifTienda = "1234567A";
+    
+    System.out.println("\n" + nombreTienda + " - " + cifTienda);
+    System.out.println("TIQUE DE COMPRA");
+    System.out.println("Precio Articulo: " + precio);
+    System.out.println("Descuento: " + descuento + "(" + codigo + ")");
+    System.out.println("Precio con descuento: " + (precio - descuento));
+    System.out.println("IVA: ");
+    System.out.println("TOTAL: ");
   }
-  
+
 }
