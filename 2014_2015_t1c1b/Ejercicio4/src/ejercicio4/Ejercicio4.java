@@ -47,8 +47,8 @@ public class Ejercicio4 {
       numeroReves /= 10;
     }
 
-    System.out.print("\n Hay " + contadorPar + " numeros pares");
-    System.out.print("\n Hay " + contadorImpar + " numeros impares");
+    System.out.print("\nHay " + contadorPar + " numeros pares");
+    System.out.print("\nHay " + contadorImpar + " numeros impares");
   }
 
 }
