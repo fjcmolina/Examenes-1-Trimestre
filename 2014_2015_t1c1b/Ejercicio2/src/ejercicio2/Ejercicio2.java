@@ -14,8 +14,38 @@ import java.util.Scanner;
 public class Ejercicio2 {
 
   public static void main(String[] args) {
-    
+
     Scanner s = new Scanner(System.in);
+
+    int cantidadPrimos = 0;
+    String primos = "";
+
+    for (int i = 0; i < 10; i++) {
+      System.out.println("Introduce un numero: ");
+      int numero = s.nextInt();
+
+      boolean esPrimo = true;
+      int divisor = 2;
+
+      while ((esPrimo) && (divisor <= (numero / 2))) {
+
+        if ((numero % divisor) != 0) {
+          divisor++;
+        } else {
+          esPrimo = false;
+        }
+      }
+
+      if ((esPrimo) && (numero > 1)) {
+        if (cantidadPrimos == 0) {
+          primos += numero + "";
+        } else {
+          primos += ", " + numero;
+        }
+        cantidadPrimos++;
+      }
+    }
+
+    System.out.print("En total ha introducido " + cantidadPrimos + " números primos, los cuales" + " son " + primos + ".");
   }
-  
 }
