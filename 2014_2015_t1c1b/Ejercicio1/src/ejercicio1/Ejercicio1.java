@@ -10,6 +10,8 @@
  */
 package ejercicio1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Francis
@@ -17,7 +19,34 @@ package ejercicio1;
 public class Ejercicio1 {
 
   public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
+
+    System.out.print("Introduce el cargo desempeñado (1.Peon 2.Albañil 3.Encargado de obra): ");
+    int cargo = s.nextInt();
+
+    System.out.print("Introduce el numero de horas trabajadas: ");
+    int horas = s.nextInt();
+
+    int sueldoBase = 0;
+
+    switch (cargo) {
+      case 1:
+        sueldoBase = 1000;
+        break;
+
+      case 2:
+        sueldoBase = 1400;
+        break;
+
+      case 3:
+        sueldoBase = 1700;
+        break;
+
+      default:
+    }
     
+    System.out.println("Sueldo del trabajador: " + sueldoBase);
   }
-  
+
 }
