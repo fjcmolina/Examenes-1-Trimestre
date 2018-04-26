@@ -40,7 +40,7 @@ public class Ejercicio1 {
     String codigo = s.next();
 
     double descuento = 0;
-    
+
     if (codigo.equals("0")) {
       descuento = 0;
     }
@@ -53,15 +53,14 @@ public class Ejercicio1 {
     if (codigo.equals("AM68")) {
       descuento = 10;
     }
-     
-    
+
     String nombreTienda = "MODAS LA GUAPILLA";
     String cifTienda = "1234567A";
-    
+
     double precioDescuento = (precio - descuento);
-    double iva = (precioDescuento * 21)/100;
+    double iva = (precioDescuento * 21) / 100;
     double total = precioDescuento + iva;
-    
+
     System.out.println("\n" + nombreTienda + " - " + cifTienda);
     System.out.println("TIQUE DE COMPRA");
     System.out.println("Precio Articulo:      " + precio);
