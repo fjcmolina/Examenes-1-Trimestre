@@ -22,8 +22,97 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
   public static void main(String[] args) {
-    
-    SCanner s = new Scanner(System.in);
+
+    Scanner s = new Scanner(System.in);
+
+    System.out.print("Selecciona un día de la semana (un número del 1 al 7):");
+    int dia = s.nextInt();
+
+    if (dia < 6) {
+
+      int primerPlato = (int) ((Math.random() * 3) + 1);
+      System.out.println("MENU DEL DIA");
+      System.out.print("Primer plato: ");
+
+      switch (primerPlato) {
+
+        case 1:
+          System.out.println("Ensalada");
+          break;
+
+        case 2:
+          System.out.println("Pasta");
+          break;
+
+        case 3:
+          System.out.println("Arroz");
+          break;
+
+        default:
+      }
+
+      int segundoPlato = (int) ((Math.random() * 3) + 1);
+      System.out.print("Segundo plato: ");
+
+      switch (segundoPlato) {
+
+        case 1:
+          System.out.println("Hamburguesa de soja");
+          break;
+
+        case 2:
+          System.out.println("Filetes de seitán");
+          break;
+
+        case 3:
+          System.out.println("Albóndigas de tofu");
+          break;
+
+        default:
+      }
+
+      int guarnicion = (int) ((Math.random() * 3) + 1);
+      System.out.print("Guarnicion: ");
+
+      switch (guarnicion) {
+
+        case 1:
+          System.out.println("Patatas bravas");
+          break;
+
+        case 2:
+          System.out.println("Verduras a la planca");
+          break;
+
+        case 3:
+          System.out.println("Pimientos asados");
+          break;
+
+        default:
+      }
+
+      int postre = (int) ((Math.random() * 3) + 1);
+      System.out.print("Postre: ");
+
+      switch (postre) {
+
+        case 1:
+          System.out.println("Flan");
+          break;
+
+        case 2:
+          System.out.println("Helado");
+          break;
+
+        case 3:
+          System.out.println("Arroz con leche");
+          break;
+
+        default:
+      }
+    } else if ((dia == 6) || (dia == 7)) {
+      System.out.println("Lo sentimos, el domingo no tenemos menú disponible.");
+    }
   }
-  
+
 }
