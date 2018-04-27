@@ -111,7 +111,7 @@ public class Ejercicio1 {
         default:
       }
     } else if ((dia == 6) || (dia == 7)) {
-      System.out.println("Lo sentimos, el domingo no tenemos menú disponible.");
+      System.out.println("Lo sentimos, el domingo no tenemos menú disponible");
     }
   }
 
