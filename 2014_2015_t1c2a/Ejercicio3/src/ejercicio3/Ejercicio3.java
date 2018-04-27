@@ -66,28 +66,89 @@ public class Ejercicio3 {
 
     int calentamiento = 0;
     int grupoGrande = 0;
-    int grupoPequño = 0;
+    int grupoPequeño = 0;
 
     if (entrenamiento) {
 
+      calentamiento = (int) ((Math.random() * 3) + 1);
+      System.out.print("Calentamiento de hoy: ");
+
       switch (calentamiento) {
         case 1:
-          System.out.print("Bicicleta");
+          System.out.println("Bicicleta");
           break;
 
         case 2:
-          System.out.print("Eliptica");
+          System.out.println("Eliptica");
           break;
 
         case 3:
-          System.out.print("Cinta");
+          System.out.println("Cinta");
           break;
 
         default:
       }
-    }
 
-    if (!entrenamiento) {
+      grupoGrande = (int) ((Math.random() * 3) + 1);;
+      System.out.print("Entrenamiento del grupo grande de hoy: ");
+      
+      switch (grupoGrande) {
+        case 1:
+          System.out.println("Espalda");
+          break;
+
+        case 2:
+          System.out.println("Pecho");
+          break;
+
+        case 3:
+          System.out.println("Piernas");
+          break;
+
+        default:
+      }
+
+      grupoPequeño = (int) ((Math.random() * 3) + 1);
+      System.out.print("Entrenamiento del grupo pequeño de hoy: ");
+
+      switch (grupoPequeño) {
+        case 1:
+          System.out.println("Biceps");
+          break;
+
+        case 2:
+          System.out.println("Triceps");
+          break;
+
+        case 3:
+          System.out.println("Hombros");
+          break;
+
+        default:
+      }
+
+      int fin = (int) ((Math.random() * 4) + 1);
+
+      while (fin == calentamiento) {
+        fin = (int) ((Math.random() * 4) + 1);
+      }
+
+      System.out.print("Ultimo ejercicio del entreno de hoy: ");
+      switch (fin) {
+        case 1:
+          System.out.println("Bicicleta");
+          break;
+        case 2:
+          System.out.println("Cinta");
+          break;
+        case 3:
+          System.out.println("Eliptica");
+          break;
+        case 4:
+          System.out.println("Abdominales");
+          break;
+      }
+    } else {
       System.out.println("Hoy es dia de descanso");
     }
   }
