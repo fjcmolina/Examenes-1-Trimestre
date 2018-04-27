@@ -22,12 +22,13 @@ public class Ejercicio3 {
     Scanner s = new Scanner(System.in);
     
     System.out.print("Introduzca un número entero: ");
-    int numero = s.nextInt();
+    long numeroIntroducido = s.nextLong();
     
     System.out.print("¿Qué dígito desea eliminar? ");
-    int digito = s.nextInt();
+    long digito = s.nextLong();
     
-    System.out.println("El numero resultante es el ");
+    
+    System.out.println("El numero resultante es el " );
   }
   
 }
