@@ -26,6 +26,8 @@ public class Ejercicio3 {
     
     System.out.print("¿Qué dígito desea eliminar? ");
     int digito = s.nextInt();
+    
+    System.out.println("El numero resultante es el ");
   }
   
 }
