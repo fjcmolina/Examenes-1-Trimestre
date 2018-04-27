@@ -1,9 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *   Escribe un programa que, dado un número introducido por teclado, elija al azar uno de sus dígitos.
+ *
+ *   Ejemplo:
+ *   Por favor, introduzca un número entero positivo: 21065
+ *   6
  */
 package ejercicio1;
+
+import java.util.Scanner;
 
 /**
  *
@@ -11,11 +15,12 @@ package ejercicio1;
  */
 public class Ejercicio1 {
 
-  /**
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
+    
+    Scanner s = new Scanner(System.in);
+    
+    System.out.print("Por favor, introduzca un número entero positivo: ");
+    int num = s.nextInt();
   }
   
 }
