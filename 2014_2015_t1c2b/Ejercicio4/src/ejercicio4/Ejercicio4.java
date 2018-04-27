@@ -44,34 +44,32 @@ public class Ejercicio4 {
 
         } else if (e + i > altura - 1 && (altura * 2 - 1) - e + i > altura) {
 
-          int adorno = (int)(Math.random() * 6);
-          
+          int adorno = (int) (Math.random() * 6);
+
           switch (adorno) {
             case 0:
               System.out.print("*");
               break;
-              
+
             case 1:
               System.out.print("O");
               break;
-              
+
             case 2:
               System.out.print("O");
               break;
             case 3:
               System.out.print("O");
               break;
-              
+
             case 4:
               System.out.print("*");
               break;
-              
+
             case 5:
               System.out.print("O");
               break;
-              
-            default:
-              System.out.print("^");
+
           }
         } else {
           System.out.print(" ");
