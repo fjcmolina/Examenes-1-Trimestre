@@ -18,7 +18,7 @@ public class Ejercicio2 {
     for (int i = 0; i < 4; i++) {
 
       int colores = (int) (Math.random() * 5);
-
+   
       if (colores == 2) {
         i = 3;
       }
