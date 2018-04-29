@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *   Escribe un programa que muestre una secuencia aleatoria de colores a elegir entre rojo, amarillo,
+ *   blanco o verde. El programa parará cuando salga el rojo.
+ *
+ *   Ejemplo:
+ *   amarillo verde amarillo blanco blanco rojo
  */
 package ejercicio2;
 
@@ -11,11 +13,32 @@ package ejercicio2;
  */
 public class Ejercicio2 {
 
-  /**
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
+
+    for (int i = 0; i < 4; i++) {
+
+      int colores = (int) (Math.random() * 5);
+
+      if (colores == 2) {
+        i = 3;
+      }
+      switch (colores) {
+        case 1:
+          System.out.println("Amarillo");
+          break;
+
+        case 2:
+          System.out.println("Rojo");
+          break;
+
+        case 3:
+          System.out.println("Blanco");
+          break;
+
+        case 4:
+          System.out.println("Verde");
+          break;
+      }
+    }
   }
-  
 }
