@@ -15,11 +15,26 @@ import java.util.Scanner;
 public class Ejercicio4 {
 
   public static void main(String[] args) {
-    
+
     Scanner s = new Scanner(System.in);
+
+    int[] numero = new int[10];
+
+    for (int i = 0; i < 10; i++) {
+      System.out.print("Introduce un numero: ");
+      numero[i] = s.nextInt();
+    }
+
+    System.out.println("Array original: ");
+    for (int i = 0; i < 10; i++) {
+      System.out.print(" " + numero[i] + " ");
+    }
     
-    System.out.print("Introduce un numero: ");
-    int numero = s.nextInt();
+    
+    System.out.println("Array modificado: ");
+    for (int i = 0; i < 10; i++) {
+      System.out.print(" " + numero[i] + " ");
+    }
   }
-  
+
 }
