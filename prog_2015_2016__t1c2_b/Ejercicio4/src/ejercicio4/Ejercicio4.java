@@ -21,11 +21,9 @@ import java.util.Scanner;
  */
 public class Ejercicio4 {
 
-  /**
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
- int[] mesa = new int[10];
+
+    int[] mesa = new int[10];
     Scanner s = new Scanner(System.in);
 
     // Rellena las mesas de forma aleatoria.
@@ -88,6 +86,7 @@ public class Ejercicio4 {
           }
         }
       }
-    } while (clientes != -1);  }
-  
+    } while (clientes != -1);
+  }
+
 }
