@@ -28,6 +28,11 @@ public class Ejercicio1 {
     System.out.print("Introduzca la altura del logotipo: ");
     int altura = s.nextInt();
 
+    for (int i = 0; i < altura; i++) {
+
+      System.out.println("****");
+
+    }
   }
 
 }
