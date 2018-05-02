@@ -40,6 +40,43 @@ public class Ejercicio1 {
 
     System.out.print("Introduzca el código promocional (nopro, mitad, meno5 o 5porc): ");
     String codigo = s.next();
+
+    double iva = 0;
+
+    if (tipoIva.equals("general")) {
+      iva = ((base * 21) / 100);
+    }
+    if (tipoIva.equals("reducido")) {
+      iva = ((base * 10) / 100);
+    }
+    if (tipoIva.equals("superreducido")) {
+      iva = ((base * 40) / 100);
+    }
+
+    double descuento = 0;
+    double precioIva = base + iva;
+
+    if (codigo.equals("nopro")) {
+      descuento = 0;
+    }
+    if (codigo.equals("mitad")) {
+      descuento = (precioIva / 2);
+    }
+    if (codigo.equals("meno5")) {
+      descuento = 5;
+    }
+    if (codigo.equals("5porc")) {
+      descuento = ((precioIva * 5) / 100);
+    }
+
+    double total = precioIva - descuento;
+
+    System.out.println();
+    System.out.println("Base imponible:      " + base);
+    System.out.println("IVA:                 " + iva);
+    System.out.println("Precio con IVA:      " + precioIva);
+    System.out.println("Codigo promocional: -" + descuento);
+    System.out.println("TOTAL:               " + total);
   }
 
 }
