@@ -27,54 +27,99 @@ public class Ejercicio4 {
 
   public static void main(String[] args) {
 
-    Scanner s = new Scanner(System.in);
-
-    System.out.print("Por favor, indique la altura del árbol de Navidad: ");
+   Scanner s = new Scanner(System.in);
+    System.out.print("Introduce altura del arbol: ");
     int altura = s.nextInt();
-
-    for (int i = 0; i < altura; i++) {
-
-      for (int e = 0; e < altura * 2 - 1; e++) {
-
-        if (i == altura - 1) {
-          System.out.print("^");
-
-        } else if (e + i == altura - 1 || (altura * 2 - 1) - e + i == altura) {
-          System.out.print("^");
-
-        } else if (e + i > altura - 1 && (altura * 2 - 1) - e + i > altura) {
-
-          int adorno = (int) (Math.random() * 6);
-
-          switch (adorno) {
-            case 0:
-              System.out.print("*");
+    int espacios= altura-2;
+    int linea = 1;
+    int aleatorio = 0;
+    String caracter = "";
+    //pintamos la cima
+    while(espacios+2 > 0){ //pinta la primera estrella
+      System.out.print(" ");
+      espacios--;
+    }
+    espacios= altura-1;
+    System.out.println("*");
+    
+    while(espacios+1 > 0){ //pinta la cima
+      System.out.print(" ");
+      espacios--;
+    }
+        aleatorio = ((int)(Math.random() * 9 + 1));
+          switch(aleatorio){
+            case 1: 
+              caracter = "^";
               break;
-
-            case 1:
-              System.out.print("O");
+            case 2: 
+              caracter = "^";
               break;
-
-            case 2:
-              System.out.print("O");
+            case 3: 
+              caracter = "^";
               break;
-            case 3:
-              System.out.print("O");
+            case 4: 
+              caracter = "^";
               break;
-
-            case 4:
-              System.out.print("*");
+            case 5: 
+              caracter = "^";
               break;
-
-            case 5:
-              System.out.print("O");
+            case 6: 
+              caracter = "^";
               break;
-
-          }
-        } else {
-          System.out.print(" ");
-        }
+            case 7: 
+              caracter = "o";
+              break;
+            case 8: 
+              caracter = "o";
+              break;
+            case 9: 
+              caracter = "*";
+              break;
+            }
+    System.out.println(caracter);
+    espacios = altura-1;
+    //empezamos a pintar la piramide
+    for(int i = altura;i > 0; i--){ //pinta el arbol
+      
+      for(int j=0; j<espacios; j++){
+        System.out.print(" ");
       }
+      
+      for(int k=0; k < (linea*2)+1; k++){
+        aleatorio = ((int)(Math.random() * 9 + 1));
+          switch(aleatorio){
+            case 1: 
+              caracter = "^";
+              break;
+            case 2: 
+              caracter = "^";
+              break;
+            case 3: 
+              caracter = "^";
+              break;
+            case 4: 
+              caracter = "^";
+              break;
+            case 5: 
+              caracter = "^";
+              break;
+            case 6: 
+              caracter = "^";
+              break;
+            case 7: 
+              caracter = "o";
+              break;
+            case 8: 
+              caracter = "o";
+              break;
+            case 9: 
+              caracter = "*";
+              break;
+            }
+        System.out.print(caracter);
+      }
+      espacios--;
+      linea++;
       System.out.println();
     }
   }
