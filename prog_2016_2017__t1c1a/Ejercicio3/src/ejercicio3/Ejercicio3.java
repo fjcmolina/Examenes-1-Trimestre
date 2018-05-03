@@ -50,10 +50,10 @@ public class Ejercicio3 {
     System.out.print("Introduzca la altura de cada escalón: ");
     int altura = s.nextInt();
     
-     for (int e = 0; e < altura; e++) {
+     for (int e = 0; e < numero; e++) {
       
       
-      for (int i = 0; i < numero; i++) {
+      for (int i = 0; i < altura; i++) {
       
         for (int r = 0; r < anchura; r++) {
           System.out.print("*");
@@ -63,7 +63,7 @@ public class Ejercicio3 {
           System.out.println();
         }
       
-      anchura += 2;
+      anchura += 4;
     }
   }
   
