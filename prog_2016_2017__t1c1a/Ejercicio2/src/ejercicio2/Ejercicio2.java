@@ -37,13 +37,14 @@ public class Ejercicio2 {
 
     double precioBebida = 0;
     double precio = 0;
+    String acompañamiento = "";
 
     System.out.print("Qué ha tomado de comer? palmera, donut o pitufo: ");
     String comida = s.next();
 
     if (comida.equals("pitufo")) {
       System.out.print("¿Con qué se ha tomado el pitufo? aceite o tortilla: ");
-      String acompañamiento = s.next();
+      acompañamiento = s.next();
 
       if (acompañamiento.equals("aceite")) {
         precio = 1.20;
@@ -71,10 +72,14 @@ public class Ejercicio2 {
     if (bebida.equals("cafe")) {
       precioBebida = 1.25;
     }
-    
-    double total =  precio + precioBebida;
-    
-    System.out.println(comida + ": " + precio);
+
+    double total = precio + precioBebida;
+
+    if (comida.equals("pitufo")) {
+      System.out.println(comida + " con " + acompañamiento + ": " + precio);
+    } else {
+      System.out.println(comida + ": " + precio);
+    }
     System.out.println(bebida + ": " + precioBebida);
     System.out.println("Total desayuno: " + total);
   }
