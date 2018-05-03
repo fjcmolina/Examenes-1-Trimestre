@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *     Muestra por pantalla una secuencia aleatoria de 10 números múltiplos de 11 comprendidos entre el
+ *     330 y el 550 ambos incluidos.
+ *
+ *     Ejemplo:
+ *     517 440 385 374 550 517 484 462 363 418
  */
 package ejercicio2;
 
@@ -15,6 +17,7 @@ public class Ejercicio2 {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
+
     int numero = 0;
     int contador = 0;
 
