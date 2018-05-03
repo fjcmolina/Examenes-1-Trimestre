@@ -29,6 +29,10 @@ public class Ejercicio1 {
 
     Scanner s = new Scanner(System.in);
     
+    for(int i = 0; i < 10;i++){
+      System.out.print("Introduce un numero: ");
+      int numero =  s.nextInt();
+    }
     
   }
 
