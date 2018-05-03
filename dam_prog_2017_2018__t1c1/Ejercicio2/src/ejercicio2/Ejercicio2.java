@@ -26,8 +26,32 @@ import java.util.Scanner;
 public class Ejercicio2 {
 
   public static void main(String[] args) {
-    
+
     Scanner s = new Scanner(System.in);
+
+    System.out.print("Introduzca la altura de la bandera en cm: ");
+    int altura = s.nextInt();
+
+    System.out.print("Ahora introduzca la anchura: ");
+    int anchura = s.nextInt();
+
+    System.out.print(" ¿Quiere escudo bordado? (s/n):");
+    String escudo = s.next();
+
+    System.out.println();
+    int tamaño = altura * anchura;
+
+    System.out.print("Bandera de " + tamaño + " :");
+
+    if (escudo.equals("s")) {
+      System.out.print("Con escudo: ");
+    }
+    if (escudo.equals("n")) {
+      System.out.println("Sin escudo: ");
+    }
+
+    System.out.println("Gastos de envio: 3.25 €");
+    System.out.println("Total: ");
   }
-  
+
 }
