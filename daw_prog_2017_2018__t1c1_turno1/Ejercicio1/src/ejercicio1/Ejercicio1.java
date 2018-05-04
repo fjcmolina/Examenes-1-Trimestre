@@ -51,6 +51,8 @@ public class Ejercicio1 {
     String nombreModelo = "";
     String tipoBateria = "";
     int bateria = 0;
+    String autonoma = "";
+    int precioAutonoma = 0;
 
     if (modelo.equals("a")) {
       precioBase = 30000;
@@ -80,18 +82,35 @@ public class Ejercicio1 {
       if (tipoBateria.equals("b")) {
         bateria = 120;
       }
+
+      System.out.print("¿Quiere el paquete de conducción autónoma? (s/n): ");
+      autonoma = s.next();
     }
 
     System.out.println();
-    
+
     int precioBateria = bateria * 125;
+    int precioFinal = precioBase + precioBateria + precioAutonoma;
+    int subvencion = (5 * precioFinal)/100;
+    int total = precioFinal - subvencion;
 
     System.out.println("Gracias. Aquí tiene el presupuesto de su coche.");
     System.out.println(nombreModelo);
-    System.out.println("Precio base: " + precioBase);
-    System.out.println("Bateria de " + bateria + " kWh: " + precioBateria);
-    System.out.println("Subvencion estatal: ");
-    System.out.println("Total");
+    System.out.println("Precio base:                     " + precioBase);
+    System.out.println("Bateria de " + bateria + " kWh:               " + precioBateria);
+    
+    if (autonoma.equals("s")) {
+      precioAutonoma = 1800;
+      
+      System.out.println("Con conduccion autonoma:         " + precioAutonoma);
+    }
+    if (autonoma.equals("n")) {
+      precioAutonoma = 0;
+      
+      System.out.println("Sin conduccion autonoma:          "  + precioAutonoma);
+    }
+    System.out.println("Subvencion estatal:             -" + subvencion);
+    System.out.println("Total:                          " + total);
   }
 
 }
