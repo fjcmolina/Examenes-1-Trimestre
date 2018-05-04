@@ -16,6 +16,8 @@
  */
 package ejercicio4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Francis
@@ -23,7 +25,58 @@ package ejercicio4;
 public class Ejercicio4 {
 
   public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
     
+    boolean par = false;
+    boolean donut = false;
+    
+    System.out.print("Introduzca un número entero positivo: ");
+    int numeroIntroducido = s.nextInt();
+    
+    // Cuenta los digitos y le da la vuelta
+    int numero = numeroIntroducido;
+    int numDig = 0;
+    int numReves = 0;
+    
+    while (numero > 0) {
+      numero /= 10;
+      numDig++;
+    }
+    numero = numeroIntroducido;
+    
+    // Si el numeroIntroducido de digitos es par, comprueba las dos posiciones del centro
+    if (numDig % 2 == 0) {
+      for (int i = 0; i < (numDig / 2) - 1; i++) {
+        numero /= 10;
+      }
+      int cifra = numero % 10;
+      if (cifra == 0) {
+        donut = true;
+      }
+      numero /= 10;
+      cifra = numero % 10;
+      if (cifra != 0) {
+        donut = false;
+      }
+    } else {
+      // Si es impar, comprueba solo la del centro
+      for (int i = 0; i < (numDig / 2); i++) {
+        numero /= 10;
+      }
+      int cifra = numero % 10;
+      if (cifra == 0) {
+        donut = true;
+      }
+    }
+    
+    System.out.print("El " + numeroIntroducido);
+    
+    if (donut) {
+      System.out.println(" es un número donut");
+    } else {
+      System.out.println(" no es un número donut");
+    }
   }
-  
+
 }
