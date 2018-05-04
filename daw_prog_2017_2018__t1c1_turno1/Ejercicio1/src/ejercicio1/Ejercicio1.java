@@ -32,6 +32,8 @@
  */
 package ejercicio1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Francis
@@ -39,7 +41,57 @@ package ejercicio1;
 public class Ejercicio1 {
 
   public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
+
+    System.out.print("Seleccione el modelo de coche (a) Modelo 5 (b) Modelo 8: ");
+    String modelo = s.next();
+
+    int precioBase = 0;
+    String nombreModelo = "";
+    String tipoBateria = "";
+    int bateria = 0;
+
+    if (modelo.equals("a")) {
+      precioBase = 30000;
+      nombreModelo = "Ñesla Modelo 5";
+
+      System.out.print("Seleccione el tipo de bateria (a) 50 kWh (b) 70 kWh: ");
+      tipoBateria = s.next();
+
+      if (tipoBateria.equals("a")) {
+        bateria = 50;
+      }
+      if (tipoBateria.equals("b")) {
+        bateria = 70;
+      }
+    }
+
+    if (modelo.equals("b")) {
+      precioBase = 36000;
+      nombreModelo = "Ñesla Modelo 8";
+
+      System.out.print("Seleccione el tipo de batería (a) 80 kWh (b) 120 kWh: ");
+      tipoBateria = s.next();
+
+      if (tipoBateria.equals("a")) {
+        bateria = 80;
+      }
+      if (tipoBateria.equals("b")) {
+        bateria = 120;
+      }
+    }
+
+    System.out.println();
     
+    int precioBateria = bateria * 125;
+
+    System.out.println("Gracias. Aquí tiene el presupuesto de su coche.");
+    System.out.println(nombreModelo);
+    System.out.println("Precio base: " + precioBase);
+    System.out.println("Bateria de " + bateria + " kWh: " + precioBateria);
+    System.out.println("Subvencion estatal: ");
+    System.out.println("Total");
   }
-  
+
 }
