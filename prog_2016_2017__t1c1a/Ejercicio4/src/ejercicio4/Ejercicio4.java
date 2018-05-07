@@ -26,30 +26,30 @@ import java.util.Scanner;
 public class Ejercicio4 {
 
   public static void main(String[] args) {
-    
+
     Scanner s = new Scanner(System.in);
-    
+
     System.out.print("Por favor, introduzca un número: ");
-    long numero =  s.nextLong();
-    
+    long numero = s.nextLong();
+
     long numAux = numero;
     long numReves = 0;
     int numDig = 0;
-    
-    while (numAux > 0){
-      numReves = ((numReves*10) + (numAux % 10));
-      numAux /=10;
+
+    while (numAux > 0) {
+      numReves = ((numReves * 10) + (numAux % 10));
+      numAux /= 10;
       numDig++;
     }
-    
+
     long complementario = 0;
-    
-    for (int i = 0; i < numDig; i++){
-      complementario = (complementario*10) + (9 - numReves%10);
+
+    for (int i = 0; i < numDig; i++) {
+      complementario = (complementario * 10) + (9 - numReves % 10);
       numReves /= 10;
     }
     
     System.out.println("El complementario es el " + complementario);
   }
-  
+
 }
