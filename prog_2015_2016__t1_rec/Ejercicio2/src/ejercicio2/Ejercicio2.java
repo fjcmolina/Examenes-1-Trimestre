@@ -30,7 +30,7 @@ public class Ejercicio2 {
 
     Scanner s = new Scanner(System.in);
 
-    System.out.println("Introduce un número: ");
+    System.out.print("Introduce un número: ");
     int numero = s.nextInt();
 
     int volteado = 0;
@@ -47,7 +47,7 @@ public class Ejercicio2 {
     // luego en orden.
     int borrado;
 
-    System.out.print("La versión tacaña del número " + aux + " es ");
+    System.out.println("La versión tacaña del número " + aux + " es ");
 
     do {
       borrado = (int) (Math.random() * 2);
