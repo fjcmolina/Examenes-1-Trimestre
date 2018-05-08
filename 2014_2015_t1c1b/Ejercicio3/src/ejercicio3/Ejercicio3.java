@@ -20,39 +20,31 @@ public class Ejercicio3 {
 
     Scanner s = new Scanner(System.in);
 
-    System.out.println("Introduzaca la altura de la N: ");
-    int altura = s.nextInt();
+    System.out.print("Introduzca la altura de la N: ");
+    int alturaIntroducida = s.nextInt();
 
-    while (altura < 4) {
-      System.out.println("La altura de la Z debe ser mayor o igual de 4");
-      System.out.print("Por favor, Introduzca la altura de la Z: ");
-      altura = s.nextInt();
+    while (alturaIntroducida < 4) {
+      System.out.println("La altura de la N debe ser mayor o igual de 4");
+      System.out.print("Por favor, Introduzca la altura de la N: ");
+      alturaIntroducida = s.nextInt();
     }
 
-    //Primera linea
-    System.out.print("*");
-    for (int j = 1; j <= (altura - 2); j++) {
-      System.out.print(" ");
-    }
-    System.out.println("*");
+    int altura = 0;
+    int espacios = 0;
 
-    //Parte del centro de la N
-    for (int i = (altura - 2); i <= altura; i++) {
+    while (altura < alturaIntroducida) {
+
       System.out.print("*");
-      
-      
-      
-      for (int j = 1; j <= (altura - 2); j++) {
+
+      for (int i = 1; i <= espacios; i++) {
         System.out.print(" ");
       }
-      System.out.println("*");
-    }
 
-    //Ultima linea
-    System.out.print("*");
-    for (int j = 1; j <= (altura - 2); j++) {
-      System.out.print(" ");
+      System.out.print("*");
+
+      System.out.println();
+      altura++;
+      espacios++;
     }
-    System.out.println("*");
   }
 }
