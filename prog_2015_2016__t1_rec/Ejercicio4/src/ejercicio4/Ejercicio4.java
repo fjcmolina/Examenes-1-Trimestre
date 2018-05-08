@@ -39,9 +39,27 @@ public class Ejercicio4 {
       suma += votacion[i];
     }
 
+    System.out.println();
+
     int media = suma / 6;
 
     System.out.println("La media de votos de es: " + media);
+
+    System.out.println();
+
+    for (int i = 0; i < 6; i++) {
+
+      if (media < votacion[i]) {
+        System.out.println("Este partido ha obtenido votos por encima de la media: ");
+        System.out.println(nombrePartido[i] + " ");
+      }
+
+      if (media > votacion[i]) {
+        System.out.println("Este partido ha obtenido votos por debajo de la media: ");
+        System.out.println(nombrePartido[i] + " ");
+
+      }
+    }
 
   }
 }
