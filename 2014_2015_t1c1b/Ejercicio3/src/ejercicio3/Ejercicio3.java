@@ -29,10 +29,10 @@ public class Ejercicio3 {
       alturaIntroducida = s.nextInt();
     }
 
-    int altura = 0;
+    int altura = 1;
     int espacios = 0;
 
-    while (altura < alturaIntroducida) {
+    while (altura <= alturaIntroducida) {
 
       System.out.print("*");
 
@@ -40,11 +40,17 @@ public class Ejercicio3 {
         System.out.print(" ");
       }
 
+      espacios++;
+
       System.out.print("*");
 
-      System.out.println();
+      for (int i = espacios; i < alturaIntroducida; i++) {
+        System.out.print(" ");
+      }
+
       altura++;
-      espacios++;
+
+      System.out.println("*");
     }
   }
 }
