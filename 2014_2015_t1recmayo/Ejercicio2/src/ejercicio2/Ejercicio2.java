@@ -15,13 +15,12 @@ public class Ejercicio2 {
 
   public static void main(String[] args) {
 
-    for (int i = 0; i < 4; i++) {
+    int colores = 0;
 
-      int colores = (int) (Math.random() * 5);
-   
-      if (colores == 2) {
-        i = 3;
-      }
+    do {
+
+      colores = (int) ((Math.random() * 4) + 1);
+
       switch (colores) {
         case 1:
           System.out.println("Amarillo");
@@ -39,6 +38,6 @@ public class Ejercicio2 {
           System.out.println("Verde");
           break;
       }
-    }
+    } while (colores != 2);
   }
 }
