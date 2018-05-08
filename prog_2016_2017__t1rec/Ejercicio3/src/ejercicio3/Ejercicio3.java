@@ -58,7 +58,7 @@ public class Ejercicio3 {
       for (i = 2; i < altura; i++) {
         System.out.print("\n*");
         for (espacios = 2; espacios < ancho; espacios++) {
-          System.out.print("/");
+          System.out.print(" ");
         }
         System.out.print("*");
       }
