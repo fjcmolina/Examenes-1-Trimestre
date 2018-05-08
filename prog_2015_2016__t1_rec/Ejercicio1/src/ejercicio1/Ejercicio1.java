@@ -26,13 +26,22 @@ public class Ejercicio1 {
     Scanner s = new Scanner(System.in);
 
     System.out.print("Introduzca la altura del logotipo: ");
-    int altura = s.nextInt();
+    int alturaIntroducida = s.nextInt();
 
-    for (int i = 0; i < altura; i++) {
+    int altura = 1;
+    int espacios = alturaIntroducida;
 
-      System.out.println("****");
+    while (altura <= alturaIntroducida) {
 
+      for (int i = 1; i <= espacios; i++) {
+        System.out.print(" ");
+      }
+
+      System.out.print("****");
+
+      System.out.println();
+      altura++;
+      espacios++;
     }
   }
-
 }
