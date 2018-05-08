@@ -42,6 +42,8 @@ public class Ejercicio3 {
     System.out.print("Introduce la anchura(minimo 7): ");
     int ancho = s.nextInt();
 
+    int litros = (int) ((Math.random() * 10) + 1);
+
     if ((altura < 7) || (ancho < 7)) {
       System.out.println("Lo siento, los datos no son correctos.");
 
@@ -58,7 +60,11 @@ public class Ejercicio3 {
       for (i = 2; i < altura; i++) {
         System.out.print("\n*");
         for (espacios = 2; espacios < ancho; espacios++) {
-          System.out.print(" ");
+          if (i < (altura - litros)) {
+            System.out.print(" ");
+          }else{
+            System.out.print("~");
+          }
         }
         System.out.print("*");
       }
