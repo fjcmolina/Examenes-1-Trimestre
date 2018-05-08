@@ -17,6 +17,8 @@
  */
 package ejercicio4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Francis
@@ -24,8 +26,22 @@ package ejercicio4;
 public class Ejercicio4 {
 
   public static void main(String[] args) {
-    
-    
+
+    Scanner s = new Scanner(System.in);
+
+    String[] nombrePartido = {"Ciudadanos", "Podemos", "PP", "PSOE", "Izquierda Unida", "UpyD"};
+    int[] votacion = new int[6];
+    int suma = 0;
+
+    for (int i = 0; i < 6; i++) {
+      System.out.print("Introduce el numero de votos de " + nombrePartido[i] + ": ");
+      votacion[i] = s.nextInt();
+      suma += votacion[i];
+    }
+
+    int media = suma / 6;
+
+    System.out.println("La media de votos de es: " + media);
+
   }
-  
 }
