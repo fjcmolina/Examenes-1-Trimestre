@@ -28,12 +28,11 @@ public class Ejercicio1 {
   public static void main(String[] args) {
 
     Scanner s = new Scanner(System.in);
-    
-    for(int i = 0; i < 10;i++){
-      System.out.print("Introduce un numero: ");
-      int numero =  s.nextInt();
-    }
-    
-  }
 
+    System.out.println("Introduzca diez números enteros: ");
+    
+    for (int i = 0; i < 10; i++) {
+      int numero = s.nextInt();
+    }
+  }
 }
