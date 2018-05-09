@@ -29,10 +29,29 @@ public class Ejercicio1 {
 
     Scanner s = new Scanner(System.in);
 
+    int[] array = new int[10];
+    int frecuenciaTemp = 0;
+    int repeticionesNumero = 0;
+    int numeroRepetido = -1;
+
     System.out.println("Introduzca diez números enteros: ");
-    
-    for (int i = 0; i < 10; i++) {
-      int numero = s.nextInt();
+
+    for (int i = 0; i < (array.length - 1); i++) {
+      array[i] = s.nextInt();
     }
+
+    for (int i = 0; i < array.length - 1; i++) {
+      frecuenciaTemp = 1;
+      for (int j = i + 1; j < array.length; j++) {
+        if (array[i] == array[j]) {
+          frecuenciaTemp++;
+        }
+      }
+      if (frecuenciaTemp > repeticionesNumero) {
+        repeticionesNumero = frecuenciaTemp;
+        numeroRepetido = array[i];
+      }
+    }
+    System.out.println("El numero que mas aparece es " + numeroRepetido + " y se repite " + repeticionesNumero + " veces");
   }
 }
