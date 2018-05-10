@@ -18,17 +18,22 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
   public static void main(String[] args) {
-    
+
     Scanner s = new Scanner(System.in);
-    
+
     System.out.print("Introduzca un número entero: ");
     long numeroIntroducido = s.nextLong();
-    
+
     System.out.print("¿Qué dígito desea eliminar? ");
     long digito = s.nextLong();
     
+    String numero = String.valueOf(numeroIntroducido);
+    String digitoString = String.valueOf(digito);
     
-    System.out.println("El numero resultante es el " );
+    numero = numero.replaceAll(digitoString, "");
+    
+    
+    System.out.println("El numero resultante es el " + numero);
   }
-  
+
 }
