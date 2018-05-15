@@ -39,7 +39,7 @@ public class Ejercicio4 {
       numDig++;
     }
 
-    // Revisa los números y lelimina el 8 y el 0
+    // Revisa los números y elimina el 8 y el 0
     long gusano = 0;
 
     for (int i = 1; i <= numDig; i++) {
