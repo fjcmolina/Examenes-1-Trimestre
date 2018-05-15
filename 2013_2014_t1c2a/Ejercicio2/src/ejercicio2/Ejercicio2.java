@@ -48,10 +48,10 @@ public class Ejercicio2 {
       if (i == 0){
         color1 = color;
         i++;
-      } else if ((i == 1) && (color1 != color)){
+      } else if ((i == 1) && (!color1.equals(color))){
         color2 = color;
         i++;
-      } else if ((i == 2) && (color1 != color) && (color2 != color)){
+      } else if ((i == 2) && (!color1.equals(color)) && (!color2.equals(color))){
         color3 = color;
         i++;
       }
